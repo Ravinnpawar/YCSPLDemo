@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MapsActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="60dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/white"
+            android:clickable="true"
+            android:src="@drawable/plus"
+            android:tint="@color/black"
+            map:fabSize="normal"
+            map:backgroundTint="@color/black"
+            android:focusable="true"
+            android:contentDescription="TODO" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_marginBottom="60dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/white"
+            android:clickable="true"
+            android:tint="@color/black"
+            android:visibility="gone"
+            map:backgroundTint="@color/black"
+            android:src="@drawable/quantum_ic_clear_grey600_24"
+            android:focusable="true" />
+        <include layout="@layout/bottom_sheet" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</fragment>
